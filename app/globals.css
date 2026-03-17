@@ -14,7 +14,6 @@
   --font-display: var(--font-bebas-neue);
   --font-serif: var(--font-playfair-display);
   --font-mono: var(--font-space-mono);
-
 }
 
 [data-theme="light"] {
@@ -29,6 +28,12 @@
   --color-purple:  #8040d0;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -39,4 +44,34 @@ body {
   font-family: var(--font-mono), monospace;
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.animate-pulse-dot   {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.6);
+  }
+}
+
+.animate-scroll-line {
+  animation: scroll-line 2s ease-in-out infinite;
+}
+
+@keyframes scroll-line {
+  0%, 100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(0.4);
+    opacity: 0.4;
+  }
 }
