@@ -1,31 +1,43 @@
 @import "tailwindcss";
 
+:root {
+  --raw-bg:      #0d0d0d;
+  --raw-surface: #161616;
+  --raw-border:  #2a2a2a;
+  --raw-text:    #f0ece3;
+  --raw-muted:   #7a7570;
+  --raw-yellow:  #f5d800;
+  --raw-coral:   #ff4d3a;
+  --raw-teal:    #00c9b1;
+  --raw-purple:  #b46ef5;
+}
+
+[data-theme="light"] {
+  --raw-bg:      #f5f0e8;
+  --raw-surface: #ede8df;
+  --raw-border:  #c8c0b4;
+  --raw-text:    #1a1510;
+  --raw-muted:   #7a7060;
+  --raw-yellow:  #d4a900;
+  --raw-coral:   #e83520;
+  --raw-teal:    #007d6f;
+  --raw-purple:  #8040d0;
+}
+
 @theme inline {
-  --color-bg:      #0d0d0d;
-  --color-surface: #161616;
-  --color-border:  #2a2a2a;
-  --color-text:    #f0ece3;
-  --color-muted:   #7a7570;
-  --color-yellow:  #f5d800;
-  --color-coral:   #ff4d3a;
-  --color-teal:    #00c9b1;
-  --color-purple:  #b46ef5;
+  --color-bg: var(--raw-bg);
+  --color-surface: var(--raw-surface);
+  --color-border: var(--raw-border);
+  --color-text: var(--raw-text);
+  --color-muted: var(--raw-muted);
+  --color-yellow: var(--raw-yellow);
+  --color-coral: var(--raw-coral);
+  --color-teal: var(--raw-teal);
+  --color-purple: var(--raw-purple);
 
   --font-display: var(--font-bebas-neue);
   --font-serif: var(--font-playfair-display);
   --font-mono: var(--font-space-mono);
-}
-
-[data-theme="light"] {
-  --color-bg:      #f5f0e8;
-  --color-surface: #ede8df;
-  --color-border:  #c8c0b4;
-  --color-text:    #1a1510;
-  --color-muted:   #7a7060;
-  --color-yellow:  #d4a900;
-  --color-coral:   #e83520;
-  --color-teal:    #007d6f;
-  --color-purple:  #8040d0;
 }
 
 html, body {
