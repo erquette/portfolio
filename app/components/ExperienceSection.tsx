@@ -29,7 +29,7 @@ export default function ExperienceSection() {
           Work Experience
         </p>
         <h2 className="font-display text-[clamp(2.5rem,8vw,5rem)] uppercase leading-none tracking-wide text-text">
-          Where I've
+          Where I&apos;ve
           <br />
           Worked.
         </h2>

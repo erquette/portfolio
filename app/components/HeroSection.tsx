@@ -87,7 +87,7 @@ export default function HeroSection() {
               transition-colors duration-200
             "
           >
-            Let's Talk
+            Let&apos;s Talk
           </a>
         </div>
       </div>
