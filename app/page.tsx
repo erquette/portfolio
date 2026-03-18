@@ -1,11 +1,13 @@
+import HeroSection from "@/app/components/HeroSection";
+import ExperienceSection from "@/app/components/ExperienceSection";
 
 
 export default function Home() {
   return (
     <main>
-      <div className="flex justify-center items-center min-h-screen">
-        <p>Hello, World!</p>
-      </div>
+      <HeroSection />
+      <div className="section-divider" />
+      <ExperienceSection />
     </main>
   );
 }
