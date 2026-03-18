@@ -77,10 +77,10 @@ export const BIO_PARAGRAPHS = [
 ]
 
 export const SKILLS = [
-  { key: 'frontend',  values: 'React, Angular, Next.js, Tailwind, JS, TS, HTML, CSS' },
-  { key: 'backend',   values: 'Node.js, Python, Java, C#, C++' },
-  { key: 'databases', values: 'MySQL, Firebase, MongoDB, Cosmos DB' },
-  { key: 'cloud',     values: 'AWS, Azure, GitHub Actions, Docker' },
-  { key: 'tools',     values: 'Git, GitHub, Jira, Jest, JUnit' },
-  { key: 'design',    values: 'Figma, Canva' },
+  { key: "frontend",  values: "React, Angular, Next.js, Tailwind, JS, TS, HTML, CSS" },
+  { key: "backend",   values: "Node.js, Python, Java, C#, C++ Django", },
+  { key: "databases", values: "MySQL, Firebase, MongoDB, Cosmos DB" },
+  { key: "cloud",     values: "AWS, Azure, GitHub Actions, Docker" },
+  { key: "tools",     values: "Git, GitHub, Jira, Jest, JUnit" },
+  { key: "design",    values: "Figma, Canva" },
 ]
