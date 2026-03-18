@@ -69,3 +69,18 @@ export const EXPERIENCES: Experience[] = [
     tech: ["Android Studio", "Java", "Google Firebase", "Git & GitHub"],
   },
 ]
+
+export const BIO_PARAGRAPHS = [
+  "Since you made it this far, I should probably tell you a bit about who I am. A recent graduate who genuinely enjoys building things that work, someone who gets an unreasonable amount of satisfaction from starting with nothing and ending up with something people actually use. Yup, that's me.",
+  "I am drawn to technology not just as a career but as a genuine interest. I have an innate curiosity that makes me want to poke around anything new; whether it is a tool I have not tried yet or just something that caught my eye for no good reason.",
+  "Outside of all that, I am either deep in a game with my friends or going down some rabbit hole that has absolutely nothing to do with what I should actually be doing. I genuinely believe curiosity and the willingness to learn are the best traits a developer can have, and I try to bring both into everything I work on."
+]
+
+export const SKILLS = [
+  { key: 'frontend',  values: 'React, Angular, Next.js, Tailwind, JS, TS, HTML, CSS' },
+  { key: 'backend',   values: 'Node.js, Python, Java, C#, C++' },
+  { key: 'databases', values: 'MySQL, Firebase, MongoDB, Cosmos DB' },
+  { key: 'cloud',     values: 'AWS, Azure, GitHub Actions, Docker' },
+  { key: 'tools',     values: 'Git, GitHub, Jira, Jest, JUnit' },
+  { key: 'design',    values: 'Figma, Canva' },
+]
