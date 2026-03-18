@@ -15,7 +15,7 @@ export default function NavigationBar() {
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
-  ]
+  ];
 
   return (
     <>
@@ -69,24 +69,27 @@ export default function NavigationBar() {
           </button>
 
           <button
-            onClick={() => setIsMobileMenuOpen(prev => !prev)}
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             aria-label="Open navigation menu"
             aria-expanded={isMobileMenuOpen}
             className={`
               flex md:hidden flex-col justify-center gap-[5px]
               w-[30px] h-[30px] bg-transparent border-none p-1
               transition-transform duration-300
-              ${isMobileMenuOpen ? 'rotate-90' : 'rotate-0'}
+              ${isMobileMenuOpen ? "rotate-90" : "rotate-0"}
             `}
           >
-            <span className={`block w-full h-[2px] bg-text origin-center transition-all duration-300
-              ${isMobileMenuOpen ? 'translate-y-[7px] rotate-45' : ''}`}
+            <span
+              className={`block w-full h-[2px] bg-text origin-center transition-all duration-300
+              ${isMobileMenuOpen ? "translate-y-[7px] rotate-45" : ""}`}
             />
-            <span className={`block w-full h-[2px] bg-text transition-all duration-300
-              ${isMobileMenuOpen ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'}`}
+            <span
+              className={`block w-full h-[2px] bg-text transition-all duration-300
+              ${isMobileMenuOpen ? "opacity-0 scale-x-0" : "opacity-100 scale-x-100"}`}
             />
-            <span className={`block w-full h-[2px] bg-text origin-center transition-all duration-300
-              ${isMobileMenuOpen ? '-translate-y-[7px] -rotate-45' : ''}`}
+            <span
+              className={`block w-full h-[2px] bg-text origin-center transition-all duration-300
+              ${isMobileMenuOpen ? "-translate-y-[7px] -rotate-45" : ""}`}
             />
           </button>
         </div>
@@ -97,9 +100,10 @@ export default function NavigationBar() {
           fixed inset-0 z-40 bg-bg
           flex flex-col items-center justify-center gap-8
           transition-all duration-300 ease-out
-          ${isMobileMenuOpen
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-4 pointer-events-none"
+          ${
+            isMobileMenuOpen
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 -translate-y-4 pointer-events-none"
           }
         `}
       >
@@ -108,13 +112,16 @@ export default function NavigationBar() {
             <li
               key={link.href}
               style={{
-                transitionDelay: isMobileMenuOpen ? `${index * 60 + 100}ms` : "0ms"
+                transitionDelay: isMobileMenuOpen
+                  ? `${index * 60 + 100}ms`
+                  : "0ms",
               }}
               className={`
                 transition-all duration-300
-                ${isMobileMenuOpen
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-4"
+                ${
+                  isMobileMenuOpen
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-4"
                 }
               `}
             >
@@ -133,4 +140,5 @@ export default function NavigationBar() {
         </ul>
       </div>
     </>
-)}
+  );
+}

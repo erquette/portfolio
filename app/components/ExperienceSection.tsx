@@ -1,7 +1,7 @@
-"use client"
-import { useState, useEffect } from "react"
-import { EXPERIENCES } from "@/app/utils/data"
-import ExperienceCard from "@/app/components/ExperienceCard"
+"use client";
+import { useState, useEffect } from "react";
+import { EXPERIENCES } from "@/app/utils/data";
+import ExperienceCard from "@/app/components/ExperienceCard";
 
 export default function ExperienceSection() {
   const [isReady, setIsReady] = useState(false);
@@ -9,7 +9,7 @@ export default function ExperienceSection() {
   useEffect(() => {
     const t = setTimeout(() => setIsReady(true), 80);
     return () => clearTimeout(t);
-  }, [])
+  }, []);
 
   return (
     <section
@@ -23,11 +23,15 @@ export default function ExperienceSection() {
         `}
       >
         <p className="font-mono text-[0.65rem] font-bold tracking-[0.2em] uppercase text-muted mb-2 flex items-center gap-2">
-          <span className="font-display text-[2.5rem] leading-none text-yellow/20">01</span>
+          <span className="font-display text-[2.5rem] leading-none text-yellow/20">
+            01
+          </span>
           Work Experience
         </p>
         <h2 className="font-display text-[clamp(2.5rem,8vw,5rem)] uppercase leading-none tracking-wide text-text">
-          Where I've<br />Worked.
+          Where I've
+          <br />
+          Worked.
         </h2>
       </div>
 
@@ -41,14 +45,21 @@ export default function ExperienceSection() {
       >
         <div className="flex items-center gap-2">
           <div className="w-5 h-[3px] bg-yellow" />
-          <span className="font-mono text-[0.6rem] tracking-[0.12em] uppercase text-muted">Full-time</span>
+          <span className="font-mono text-[0.6rem] tracking-[0.12em] uppercase text-muted">
+            Full-time
+          </span>
         </div>
         <div className="flex items-center gap-2">
           <div
             className="w-5 h-[3px]"
-            style={{ background: "repeating-linear-gradient(90deg,rgba(245,216,0,0.7) 0,rgba(245,216,0,0.7) 4px,transparent 4px,transparent 7px)" }}
+            style={{
+              background:
+                "repeating-linear-gradient(90deg,rgba(245,216,0,0.7) 0,rgba(245,216,0,0.7) 4px,transparent 4px,transparent 7px)",
+            }}
           />
-          <span className="font-mono text-[0.6rem] tracking-[0.12em] uppercase text-muted">Part-time</span>
+          <span className="font-mono text-[0.6rem] tracking-[0.12em] uppercase text-muted">
+            Part-time
+          </span>
         </div>
       </div>
 
@@ -65,5 +76,5 @@ export default function ExperienceSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
