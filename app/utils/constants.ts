@@ -1,3 +1,5 @@
+import { SKILLS } from "@/app/utils/data";
+
 export const MONTH_MAP: Record<string, number> = {
   Jan: 0,
   Feb: 1,
@@ -12,3 +14,5 @@ export const MONTH_MAP: Record<string, number> = {
   Nov: 10,
   Dec: 11,
 };
+
+export const KEY_WIDTH = Math.max(...SKILLS.map((s) => s.key.length)) + 2;
