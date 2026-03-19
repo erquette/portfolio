@@ -1,4 +1,4 @@
-import { Experience } from "@/app/utils/types";
+import { Experience, Project } from "@/app/utils/types";
 
 export const PROFILE = {
   firstName: "Cinguinique",
@@ -67,6 +67,56 @@ export const EXPERIENCES: Experience[] = [
       "The one-on-one sessions were my favourite part of the role. There is something genuinely satisfying about sitting with someone who has been stuck for an hour and watching it finally click for them.",
     ],
     tech: ["Android Studio", "Java", "Google Firebase", "Git & GitHub"],
+  },
+];
+
+export const PROJECTS: Project[] = [
+  {
+    title: "SimplyScan",
+    year: "2026",
+    status: "IP",
+    description:
+      "I recently found out the scanning app I had been using was storing data on their servers. Privacy when scanning personal documents shouldn't be an afterthought, so I built something where nothing leaves your device. It also gave me an excuse to get into computer vision, playing around with edge detection, perspective warping, and all that cool stuff.",
+    tech: ["React", "TypeScript", "OpenCV.js"],
+  },
+  {
+    title: "Azure DSN",
+    year: "2024",
+    description:
+      "As part of a course project, I led a team of six building a distributed social network inspired by Mastodon. The project itself spans about 2-3 months, and somewhere between wrangling the Django backend and keeping everyone moving in the same direction, I actually started to get how the web works.",
+    tech: ["React", "TypeScript", "Django", "Web Development"],
+    links: [
+      { label: "GitHub", href: "https://github.com/cmput404-azure/AzureDSN" },
+      { label: "Video", href: "https://www.youtube.com/watch?v=ZJmXECT2B4o" },
+    ],
+  },
+  {
+    title: "DishZero",
+    year: "2023",
+    description:
+      "I joined Blueprint, my university's software development club that builds things for non-profits, and landed on the DishZero team right before their launch. Since I came in late, my job was QA; writing UI tests, mocking authenticated sessions, making sure everything held up before real users touched it. The app has since launched at two universities, which felt pretty good to be even a small part of.",
+    tech: ["React", "JavaScript", "Jest", "QA Testing"],
+    links: [
+      { label: "GitHub", href: "https://github.com/UofA-Blueprint/DishZero" },
+      {
+        label: "Article",
+        href: "https://www.ualberta.ca/en/sustainability/about/news-profiles/2023/january/new_reusable_dish_service_take_out_ualberta_takeout.html",
+      },
+    ],
+  },
+  {
+    title: "QR Code Hunter",
+    year: "2023",
+    description:
+      "This was my first real taste of building something with a team. We made a gamified QR code scanning game for Android where each code gets a procedurally generated name and identity from its hash. Though, what I remember most is learning how to use Git properly, how to review someone else's code, and realising that making software with other people is a completely different skill from making it alone.",
+    tech: ["Android Studio", "Java", "Google Firebase", "Mobile Development"],
+    links: [
+      { label: "GitHub", href: "https://github.com/CMPUT301W23T17/JellyFizz" },
+      {
+        label: "Video",
+        href: "https://drive.google.com/file/d/1_Iio_WFnOR3vxGR8diYCUpKshF1hqVNi/view?usp=sharing",
+      },
+    ],
   },
 ];
 
