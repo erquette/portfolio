@@ -1,20 +1,20 @@
-"use client"
-import { useState, useEffect } from "react"
-import { PROFILE } from "@/app/utils/data"
+"use client";
+import { useState, useEffect } from "react";
+import { PROFILE } from "@/app/utils/data";
 
 export default function HeroSection() {
-  const [isReady, setIsReady] = useState(false)
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     // so that the transition has a "before" state to animate from
-    const t = setTimeout(() => setIsReady(true), 60)
-    return () => clearTimeout(t)
-  }, [])
+    const t = setTimeout(() => setIsReady(true), 60);
+    return () => clearTimeout(t);
+  }, []);
 
   const fadeUp = [
     "transition-all duration-700 ease-out",
     isReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
-  ].join(" ")
+  ].join(" ");
 
   return (
     <section
@@ -87,10 +87,9 @@ export default function HeroSection() {
               transition-colors duration-200
             "
           >
-            Let's Talk
+            Let&apos;s Talk
           </a>
         </div>
-
       </div>
 
       <div
@@ -105,7 +104,6 @@ export default function HeroSection() {
           <span className="block w-px h-12 bg-linear-to-b from-muted to-transparent animate-scroll-line" />
         </span>
       </div>
-
     </section>
-  )
+  );
 }
