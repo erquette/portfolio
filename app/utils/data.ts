@@ -1,9 +1,9 @@
-import { Experience } from "@/app/utils/types"
+import { Experience } from "@/app/utils/types";
 
 export const PROFILE = {
-    firstName: "Cinguinique",
-    lastName: "Erquette",
-}
+  firstName: "Cinguinique",
+  lastName: "Erquette",
+};
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -68,4 +68,4 @@ export const EXPERIENCES: Experience[] = [
     ],
     tech: ["Android Studio", "Java", "Google Firebase", "Git & GitHub"],
   },
-]
+];

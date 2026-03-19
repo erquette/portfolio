@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import NavigationBar from "@/app/components/NavigationBar";
 
 interface ThemeProviderProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 interface ThemeContextValue {
@@ -13,27 +13,30 @@ interface ThemeContextValue {
 
 const ThemeContext = createContext<ThemeContextValue>({
   isDark: true,
-  toggleTheme: () => {}
-})
+  toggleTheme: () => {},
+});
 
 export function ThemeProvider(props: ThemeProviderProps) {
   const { children } = props;
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
-  }, [isDark])
+    document.documentElement.setAttribute(
+      "data-theme",
+      isDark ? "dark" : "light",
+    );
+  }, [isDark]);
 
   const toggleTheme = () => {
-    setIsDark(prev => !prev);
-  }
+    setIsDark((prev) => !prev);
+  };
 
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
       <NavigationBar />
       {children}
     </ThemeContext.Provider>
-  )
+  );
 }
 
 export function useTheme() {
