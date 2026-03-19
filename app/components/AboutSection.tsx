@@ -1,29 +1,29 @@
-"use client"
-import { useState, useEffect, useRef } from "react"
-import { BIO_PARAGRAPHS } from "@/app/utils/data"
-import TerminalCard from "@/app/components/TerminalCard"
+"use client";
+import { useState, useEffect, useRef } from "react";
+import { BIO_PARAGRAPHS } from "@/app/utils/data";
+import TerminalCard from "@/app/components/TerminalCard";
 
 export default function AboutSection() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const el = sectionRef.current
-    if (!el) return
+    const el = sectionRef.current;
+    if (!el) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
-          observer.disconnect()
+          setIsVisible(true);
+          observer.disconnect();
         }
       },
-      { threshold: 0.1 }
-    )
+      { threshold: 0.1 },
+    );
 
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [])
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
@@ -31,7 +31,6 @@ export default function AboutSection() {
       id="about"
       className="relative z-10 px-5 md:px-10 py-24 max-w-6xl mx-auto"
     >
-
       <div
         className={`
           mb-8 transition-all duration-700 ease-out
@@ -39,11 +38,15 @@ export default function AboutSection() {
         `}
       >
         <p className="font-mono text-[0.65rem] font-bold tracking-[0.2em] uppercase text-muted mb-2 flex items-center gap-2">
-          <span className="font-display text-[2.5rem] leading-none text-yellow/20">03</span>
+          <span className="font-display text-[2.5rem] leading-none text-yellow/20">
+            03
+          </span>
           About Me
         </p>
         <h2 className="font-display text-[clamp(2.5rem,8vw,5rem)] uppercase leading-none tracking-wide text-text">
-          You Made It<br />This Far.
+          You Made It
+          <br />
+          This Far.
         </h2>
       </div>
 
@@ -67,7 +70,6 @@ export default function AboutSection() {
 
         <TerminalCard isVisible={isVisible} />
       </div>
-
     </section>
-  )
+  );
 }

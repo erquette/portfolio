@@ -20,7 +20,9 @@ export default function TerminalCard(props: TerminalCardProps) {
         <span className="w-[10px] h-[10px] rounded-full bg-yellow flex-none" />
         <span className="w-[10px] h-[10px] rounded-full bg-teal flex-none" />
       </div>
-      <div className="mb-1" style={{ color: "rgba(245,216,0,0.3)" }}>// skills.txt</div>
+      <div className="mb-1" style={{ color: "rgba(245,216,0,0.3)" }}>
+        {"// skills"}
+      </div>
       {SKILLS.map(({ key, values }) => (
         <div key={key} className="flex">
           <span
@@ -40,5 +42,5 @@ export default function TerminalCard(props: TerminalCardProps) {
         <span className="inline-block w-[2px] h-[14px] align-middle animate-blink bg-yellow ml-1"></span>
       </div>
     </div>
-  )
+  );
 }
