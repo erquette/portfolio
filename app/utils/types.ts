@@ -1,4 +1,3 @@
-
 export interface JobPeriod {
   start: string,  // "MMM YYYY"
   end: string  // "MMM YYYY" or "Present"
