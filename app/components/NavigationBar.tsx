@@ -12,9 +12,9 @@ export default function NavigationBar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks: NavLink[] = [
-    { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
+    { label: "About", href: "#about" },
   ];
 
   return (
