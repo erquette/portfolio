@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --raw-bg:      #0d0d0d;
+  --raw-bg: #0d0d0d;
   --raw-surface: #161616;
-  --raw-border:  #2a2a2a;
-  --raw-text:    #f0ece3;
-  --raw-muted:   #7a7570;
-  --raw-yellow:  #f5d800;
-  --raw-coral:   #ff4d3a;
-  --raw-teal:    #00c9b1;
-  --raw-purple:  #b46ef5;
+  --raw-border: #2a2a2a;
+  --raw-text: #f0ece3;
+  --raw-muted: #7a7570;
+  --raw-yellow: #f5d800;
+  --raw-coral: #ff4d3a;
+  --raw-teal: #00c9b1;
+  --raw-purple: #b46ef5;
 }
 
 [data-theme="light"] {
-  --raw-bg:      #f5f0e8;
+  --raw-bg: #f5f0e8;
   --raw-surface: #ede8df;
-  --raw-border:  #c8c0b4;
-  --raw-text:    #1a1510;
-  --raw-muted:   #7a7060;
-  --raw-yellow:  #d4a900;
-  --raw-coral:   #e83520;
-  --raw-teal:    #007d6f;
-  --raw-purple:  #8040d0;
+  --raw-border: #c8c0b4;
+  --raw-text: #1a1510;
+  --raw-muted: #7a7060;
+  --raw-yellow: #d4a900;
+  --raw-coral: #e83520;
+  --raw-teal: #007d6f;
+  --raw-purple: #8040d0;
 }
 
 @theme inline {
@@ -40,7 +40,8 @@
   --font-mono: var(--font-space-mono);
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -55,15 +56,18 @@ body {
   color: var(--color-text);
   font-family: var(--font-mono), monospace;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
-.animate-pulse-dot   {
+.animate-pulse-dot {
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
 @keyframes pulse-dot {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
@@ -78,12 +82,27 @@ body {
 }
 
 @keyframes scroll-line {
-  0%, 100% {
+  0%,
+  100% {
     transform: scaleY(1);
     opacity: 1;
   }
   50% {
     transform: scaleY(0.4);
     opacity: 0.4;
+  }
+}
+
+.animate-blink {
+  animation: blink-anim 1.5s step-end infinite;
+}
+
+@keyframes blink-anim {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }

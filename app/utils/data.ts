@@ -1,9 +1,10 @@
-import { Experience } from "@/app/utils/types"
+import { Experience, Project } from "@/app/utils/types";
 
 export const PROFILE = {
-    firstName: "Cinguinique",
-    lastName: "Erquette",
-}
+  firstName: "Cinguinique",
+  lastName: "Erquette",
+  email: "cinguinique@gmail.com",
+};
 
 export const EXPERIENCES: Experience[] = [
   {
@@ -68,4 +69,72 @@ export const EXPERIENCES: Experience[] = [
     ],
     tech: ["Android Studio", "Java", "Google Firebase", "Git & GitHub"],
   },
-]
+];
+
+export const PROJECTS: Project[] = [
+  {
+    title: "SimplyScan",
+    year: "2026",
+    status: "IP",
+    description:
+      "I recently found out the scanning app I had been using was storing data on their servers. Privacy when scanning personal documents shouldn't be an afterthought, so I built something where nothing leaves your device. It also gave me an excuse to get into computer vision, playing around with edge detection, perspective warping, and all that cool stuff.",
+    tech: ["React", "TypeScript", "OpenCV.js"],
+  },
+  {
+    title: "Azure DSN",
+    year: "2024",
+    description:
+      "As part of a course project, I led a team of six building a distributed social network inspired by Mastodon. The project itself spans about 2-3 months, and somewhere between wrangling the Django backend and keeping everyone moving in the same direction, I actually started to get how the web works.",
+    tech: ["React", "TypeScript", "Django", "Web Development"],
+    links: [
+      { label: "GitHub", href: "https://github.com/cmput404-azure/AzureDSN" },
+      { label: "Video", href: "https://www.youtube.com/watch?v=ZJmXECT2B4o" },
+    ],
+  },
+  {
+    title: "DishZero",
+    year: "2023",
+    description:
+      "I joined Blueprint, my university's software development club that builds things for non-profits, and landed on the DishZero team right before their launch. Since I came in late, my job was QA; writing UI tests, mocking authenticated sessions, making sure everything held up before real users touched it. The app has since launched at two universities, which felt pretty good to be even a small part of.",
+    tech: ["React", "JavaScript", "Jest", "QA Testing"],
+    links: [
+      { label: "GitHub", href: "https://github.com/UofA-Blueprint/DishZero" },
+      {
+        label: "Article",
+        href: "https://www.ualberta.ca/en/sustainability/about/news-profiles/2023/january/new_reusable_dish_service_take_out_ualberta_takeout.html",
+      },
+    ],
+  },
+  {
+    title: "QR Code Hunter",
+    year: "2023",
+    description:
+      "This was my first real taste of building something with a team. We made a gamified QR code scanning game for Android where each code gets a procedurally generated name and identity from its hash. Though, what I remember most is learning how to use Git properly, how to review someone else's code, and realising that making software with other people is a completely different skill from making it alone.",
+    tech: ["Android Studio", "Java", "Google Firebase", "Mobile Development"],
+    links: [
+      { label: "GitHub", href: "https://github.com/CMPUT301W23T17/JellyFizz" },
+      {
+        label: "Video",
+        href: "https://drive.google.com/file/d/1_Iio_WFnOR3vxGR8diYCUpKshF1hqVNi/view?usp=sharing",
+      },
+    ],
+  },
+];
+
+export const BIO_PARAGRAPHS = [
+  "Since you made it this far, I should probably tell you a bit about who I am. A recent graduate who has a passion in building things that work — someone who gets an unreasonable amount of satisfaction from starting with nothing and ending up with something people actually use. Yup, that's me.",
+  "I am drawn to technology not just as a career but as a genuine interest. I have an innate curiosity that makes me want to poke around anything new, whether it is a tool I have not tried yet or just something that caught my eye for no good reason.",
+  "Outside of all that, I am either deep in a game with my friends or going down some rabbit hole that has absolutely nothing to do with what I should actually be doing. I deeply believe that curiosity and the willingness to learn are the best traits a developer can have, and I try to bring both into everything I work on.",
+];
+
+export const SKILLS = [
+  {
+    key: "frontend",
+    values: "React, Angular, Next.js, Tailwind, JS, TS, HTML, CSS",
+  },
+  { key: "backend", values: "Node.js, Python, Java, C#, C++ Django" },
+  { key: "databases", values: "MySQL, Firebase, MongoDB, Cosmos DB" },
+  { key: "cloud", values: "AWS, Azure, GitHub Actions, Docker" },
+  { key: "tools", values: "Git, GitHub, Jira, Jest, JUnit" },
+  { key: "design", values: "Figma, Canva" },
+];

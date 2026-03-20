@@ -1,20 +1,22 @@
-"use client"
-import { useState, useEffect } from "react"
-import { PROFILE } from "@/app/utils/data"
+"use client";
+import { useState, useEffect } from "react";
+import { PROFILE } from "@/app/utils/data";
+import { useScrollTo } from "@/app/hooks/useScrollTo";
 
 export default function HeroSection() {
-  const [isReady, setIsReady] = useState(false)
+  const [isReady, setIsReady] = useState(false);
+  const scrollTo = useScrollTo();
 
   useEffect(() => {
     // so that the transition has a "before" state to animate from
-    const t = setTimeout(() => setIsReady(true), 60)
-    return () => clearTimeout(t)
-  }, [])
+    const t = setTimeout(() => setIsReady(true), 60);
+    return () => clearTimeout(t);
+  }, []);
 
   const fadeUp = [
     "transition-all duration-700 ease-out",
     isReady ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6",
-  ].join(" ")
+  ].join(" ");
 
   return (
     <section
@@ -65,20 +67,20 @@ export default function HeroSection() {
           className={`${fadeUp} flex flex-wrap gap-3`}
           style={{ transitionDelay: "360ms" }}
         >
-          <a
-            href="#projects"
+          <button
+            onClick={() => scrollTo("projects")}
             className="
               inline-flex items-center gap-2
               font-mono text-xs font-bold tracking-widest uppercase
               px-6 py-3 border-2 border-yellow bg-yellow text-bg
               hover:bg-coral hover:border-coral hover:text-white
-              transition-colors duration-200
+              transition-colors duration-200 cursor-pointer
             "
           >
             View Projects →
-          </a>
+          </button>
           <a
-            href="#contact"
+            href={`mailto:${PROFILE.email}`}
             className="
               inline-flex items-center gap-2
               font-mono text-xs font-bold tracking-widest uppercase
@@ -87,10 +89,9 @@ export default function HeroSection() {
               transition-colors duration-200
             "
           >
-            Let's Talk
+            Let&rsquo;s Talk
           </a>
         </div>
-
       </div>
 
       <div
@@ -105,7 +106,6 @@ export default function HeroSection() {
           <span className="block w-px h-12 bg-linear-to-b from-muted to-transparent animate-scroll-line" />
         </span>
       </div>
-
     </section>
-  )
+  );
 }
