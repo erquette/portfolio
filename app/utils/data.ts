@@ -3,6 +3,7 @@ import { Experience, Project } from "@/app/utils/types";
 export const PROFILE = {
   firstName: "Cinguinique",
   lastName: "Erquette",
+  email: "cinguinique@gmail.com",
 };
 
 export const EXPERIENCES: Experience[] = [

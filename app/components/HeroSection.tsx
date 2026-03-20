@@ -78,7 +78,7 @@ export default function HeroSection() {
             View Projects →
           </a>
           <a
-            href="#contact"
+            href={`mailto:${PROFILE.email}`}
             className="
               inline-flex items-center gap-2
               font-mono text-xs font-bold tracking-widest uppercase
@@ -87,7 +87,7 @@ export default function HeroSection() {
               transition-colors duration-200
             "
           >
-            Let&apos;s Talk
+            Let&rsquo;s Talk
           </a>
         </div>
       </div>

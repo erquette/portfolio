@@ -94,10 +94,10 @@ body {
 }
 
 .animate-blink {
-  animation: blink 1.5s step-end infinite;
+  animation: blink-anim 1.5s step-end infinite;
 }
 
-@keyframes blink {
+@keyframes blink-anim {
   0%,
   100% {
     opacity: 1;

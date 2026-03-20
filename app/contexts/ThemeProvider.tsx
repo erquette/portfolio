@@ -1,6 +1,5 @@
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
-import NavigationBar from "@/app/components/NavigationBar";
 
 interface ThemeProviderProps {
   children: React.ReactNode;
@@ -33,7 +32,6 @@ export function ThemeProvider(props: ThemeProviderProps) {
 
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
-      <NavigationBar />
       {children}
     </ThemeContext.Provider>
   );

@@ -21,7 +21,7 @@ export default function TerminalCard(props: TerminalCardProps) {
         <span className="w-[10px] h-[10px] rounded-full bg-teal flex-none" />
       </div>
       <div className="mb-1" style={{ color: "rgba(245,216,0,0.3)" }}>
-        {"// skills"}
+        {"// skills.txt"}
       </div>
       {SKILLS.map(({ key, values }) => (
         <div key={key} className="flex">
@@ -39,7 +39,7 @@ export default function TerminalCard(props: TerminalCardProps) {
       ))}
       <div className="mt-1">
         <span style={{ color: "rgba(240,236,227,0.3)" }}>&gt;</span>
-        <span className="inline-block w-[2px] h-[14px] align-middle animate-blink bg-yellow ml-1"></span>
+        <span className="inline-block w-[2px] h-[14px] align-middle bg-yellow ml-1 animate-blink"></span>
       </div>
     </div>
   );

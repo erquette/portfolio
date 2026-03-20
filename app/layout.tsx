@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Bebas_Neue, Playfair_Display, Space_Mono } from "next/font/google";
 import { ThemeProvider } from "@/app/contexts/ThemeProvider";
 import "@/app/globals.css";
+import Footer from "@/app/components/Footer";
+import NavigationBar from "@/app/components/NavigationBar";
 
 const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
@@ -38,7 +40,11 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark">
       <body className={fontVariables}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <NavigationBar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

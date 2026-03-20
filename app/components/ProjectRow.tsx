@@ -37,7 +37,7 @@ export default function ProjectRow(props: ProjectRowProps) {
         transition-all duration-700 ease-out
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
       `}
-      style={{ transitionDelay: isVisible ? `${index * 100}ms` : "0ms" }}
+      style={{ transitionDelay: isVisible ? `${index * 75}ms` : "0ms" }}
     >
       <div
         className="
