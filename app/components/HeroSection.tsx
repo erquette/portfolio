@@ -1,9 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 import { PROFILE } from "@/app/utils/data";
+import { useScrollTo } from "@/app/hooks/useScrollTo";
 
 export default function HeroSection() {
   const [isReady, setIsReady] = useState(false);
+  const scrollTo = useScrollTo();
 
   useEffect(() => {
     // so that the transition has a "before" state to animate from
@@ -65,18 +67,18 @@ export default function HeroSection() {
           className={`${fadeUp} flex flex-wrap gap-3`}
           style={{ transitionDelay: "360ms" }}
         >
-          <a
-            href="#projects"
+          <button
+            onClick={() => scrollTo("projects")}
             className="
               inline-flex items-center gap-2
               font-mono text-xs font-bold tracking-widest uppercase
               px-6 py-3 border-2 border-yellow bg-yellow text-bg
               hover:bg-coral hover:border-coral hover:text-white
-              transition-colors duration-200
+              transition-colors duration-200 cursor-pointer
             "
           >
             View Projects →
-          </a>
+          </button>
           <a
             href={`mailto:${PROFILE.email}`}
             className="

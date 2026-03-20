@@ -1,21 +1,28 @@
 "use client";
 import { useState } from "react";
 import { useTheme } from "@/app/contexts/ThemeProvider";
+import { useScrollTo } from "@/app/hooks/useScrollTo";
 
 interface NavLink {
   label: string;
-  href: string;
+  id: string;
 }
 
 export default function NavigationBar() {
   const { isDark, toggleTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const scrollTo = useScrollTo();
 
   const navLinks: NavLink[] = [
-    { label: "Experience", href: "#experience" },
-    { label: "Projects", href: "#projects" },
-    { label: "About", href: "#about" },
+    { label: "Experience", id: "experience" },
+    { label: "Projects", id: "projects" },
+    { label: "About", id: "about" },
   ];
+
+  const handleLinkClick = (id: string) => {
+    setIsMobileMenuOpen(false);
+    scrollTo(id);
+  };
 
   return (
     <>
@@ -27,19 +34,19 @@ export default function NavigationBar() {
           bg-bg border-b-2 border-border  
         "
       >
-        <a
-          href="#hero"
-          className="font-display text-3xl text-yellow leading-none tracking-wider"
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="font-display text-3xl text-yellow leading-none tracking-wider cursor-pointer"
           aria-label="Back to top"
         >
           CE.
-        </a>
+        </button>
 
         <ul className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
+            <li key={link.id}>
+              <button
+                onClick={() => scrollTo(link.id)}
                 className="
                   font-mono text-[0.7rem] font-bold uppercase
                   px-2 py-1 border border-transparent text-text
@@ -48,7 +55,7 @@ export default function NavigationBar() {
                 "
               >
                 {link.label}
-              </a>
+              </button>
             </li>
           ))}
         </ul>
@@ -110,7 +117,7 @@ export default function NavigationBar() {
         <ul className="flex flex-col items-center gap-7">
           {navLinks.map((link, index) => (
             <li
-              key={link.href}
+              key={link.id}
               style={{
                 transitionDelay: isMobileMenuOpen
                   ? `${index * 60 + 100}ms`
@@ -125,16 +132,15 @@ export default function NavigationBar() {
                 }
               `}
             >
-              <a
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
+              <button
+                onClick={() => handleLinkClick(link.id)}
                 className="
-                  font-display text-5xl text-text tracking-wider
-                  hover:text-yellow transition-colors duration-200
+                  font-display text-5xl text-text bg-transparent tracking-wider
+                  border-none hover:text-yellow transition-colors duration-200
                 "
               >
                 {link.label}
-              </a>
+              </button>
             </li>
           ))}
         </ul>
