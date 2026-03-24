@@ -95,7 +95,7 @@ export default function HeroSection() {
       </div>
 
       <div
-        className={`${fadeUp} absolute bottom-8 right-6`}
+        className={`${fadeUp} absolute bottom-8 right-6 hidden md:flex`}
         style={{ transitionDelay: "500ms" }}
       >
         <span

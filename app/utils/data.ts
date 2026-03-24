@@ -79,6 +79,10 @@ export const PROJECTS: Project[] = [
     description:
       "I recently found out the scanning app I had been using was storing data on their servers. Privacy when scanning personal documents shouldn't be an afterthought, so I built something where nothing leaves your device. It also gave me an excuse to get into computer vision, playing around with edge detection, perspective warping, and all that cool stuff.",
     tech: ["React", "TypeScript", "OpenCV.js"],
+    links: [
+      { label: "GitHub", href: "https://github.com/erquette/simplyscan" },
+      { label: "Live", href: "https://erquette.github.io/simplyscan" },
+    ],
   },
   {
     title: "Azure DSN",
